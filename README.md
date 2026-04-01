@@ -21,6 +21,7 @@ The progression moves from single-agent primitives (tool use, code execution, pe
 | 09 | [Developer Onboarding Assistant](https://github.com/rajshrinivasan/developer-onboarding-assistant-foundry-agent) | MCP stdio — agent spawns FastMCP server, discovers 5 tools at runtime | [→](https://github.com/rajshrinivasan/developer-onboarding-assistant-foundry-agent) |
 | 10 | [Jira Sprint Coach](https://github.com/rajshrinivasan/jira-sprint-coach-foundry-agent) | MCP stdio — 6 Jira tools; agent is credential-free, server is the integration boundary | [→](https://github.com/rajshrinivasan/jira-sprint-coach-foundry-agent) |
 | 11 | [Travel Itinerary Planner](https://github.com/rajshrinivasan/travel-itinerary-planner-foundry-agent) | A2A Remote Microservices — orchestrator routes to 3 independent FastAPI agent services over HTTP; streaming output; `.ics` / `.pdf` export | [→](https://github.com/rajshrinivasan/travel-itinerary-planner-foundry-agent) |
+| 12 | [Product Support Agent](https://github.com/rajshrinivasan/product-support-foundry-agent) | Knowledge Base Grounding — FileSearchTool + VectorStore; streaming responses; source citations; persistent vector store across sessions | [→](https://github.com/rajshrinivasan/product-support-foundry-agent) |
 
 ---
 
@@ -53,6 +54,9 @@ External tool servers
 
 Remote microservices (A2A)
   11  A2A over HTTP             — orchestrator knows agents only by URL; parallel dispatch; streaming
+
+Knowledge base grounding
+  12  FileSearchTool + VectorStore — upload, chunk, embed, retrieve; streaming; persistent store
 ```
 
 ---
@@ -65,6 +69,7 @@ Remote microservices (A2A)
 - **agent-framework-foundry** — SequentialBuilder, ConcurrentBuilder, HandoffBuilder, GroupChatBuilder (Projects 05–08)
 - **mcp + fastmcp** — stdio transport, runtime tool discovery (Projects 09–10)
 - **fastapi + httpx + tenacity** — A2A HTTP microservices, parallel dispatch, retries (Project 11)
+- **azure-ai-agents** — AgentsClient, FileSearchTool, streaming via `runs.stream()` (Project 12)
 - **Azure DefaultAzureCredential** — `az login` for local dev, managed identity in production
 
 ---
