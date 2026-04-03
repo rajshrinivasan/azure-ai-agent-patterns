@@ -22,6 +22,7 @@ The progression moves from single-agent primitives (tool use, code execution, pe
 | 10 | [Jira Sprint Coach](https://github.com/rajshrinivasan/jira-sprint-coach-foundry-agent) | MCP stdio — 6 Jira tools; agent is credential-free, server is the integration boundary | [→](https://github.com/rajshrinivasan/jira-sprint-coach-foundry-agent) |
 | 11 | [Travel Itinerary Planner](https://github.com/rajshrinivasan/travel-itinerary-planner-foundry-agent) | A2A Remote Microservices — orchestrator routes to 3 independent FastAPI agent services over HTTP; streaming output; `.ics` / `.pdf` export | [→](https://github.com/rajshrinivasan/travel-itinerary-planner-foundry-agent) |
 | 12 | [Product Support Agent](https://github.com/rajshrinivasan/product-support-foundry-agent) | Knowledge Base Grounding — FileSearchTool + VectorStore; streaming responses; source citations; persistent vector store across sessions | [→](https://github.com/rajshrinivasan/product-support-foundry-agent) |
+| 13 | [Bug Triage Workflow](https://github.com/rajshrinivasan/bug-triage-workflow-foundry-agent) | Conditional DAG Workflow — LLM classifier routes to critical escalation, sprint triage, or backlog branch; Python controls flow, LLM controls content | [→](https://github.com/rajshrinivasan/bug-triage-workflow-foundry-agent) |
 
 ---
 
@@ -57,6 +58,9 @@ Remote microservices (A2A)
 
 Knowledge base grounding
   12  FileSearchTool + VectorStore — upload, chunk, embed, retrieve; streaming; persistent store
+
+Conditional DAG workflow
+  13  WorkflowEngine              — declared graph, Python branch conditions, JSON step outputs
 ```
 
 ---
