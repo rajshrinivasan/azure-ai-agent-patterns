@@ -23,6 +23,7 @@ The progression moves from single-agent primitives (tool use, code execution, pe
 | 11 | [Travel Itinerary Planner](https://github.com/rajshrinivasan/travel-itinerary-planner-foundry-agent) | A2A Remote Microservices — orchestrator routes to 3 independent FastAPI agent services over HTTP; streaming output; `.ics` / `.pdf` export | [→](https://github.com/rajshrinivasan/travel-itinerary-planner-foundry-agent) |
 | 12 | [Product Support Agent](https://github.com/rajshrinivasan/product-support-foundry-agent) | Knowledge Base Grounding — FileSearchTool + VectorStore; streaming responses; source citations; persistent vector store across sessions | [→](https://github.com/rajshrinivasan/product-support-foundry-agent) |
 | 13 | [Bug Triage Workflow](https://github.com/rajshrinivasan/bug-triage-workflow-foundry-agent) | Conditional DAG Workflow — LLM classifier routes to critical escalation, sprint triage, or backlog branch; Python controls flow, LLM controls content | [→](https://github.com/rajshrinivasan/bug-triage-workflow-foundry-agent) |
+| 14 | [Real Estate Market Analyzer](https://github.com/rajshrinivasan/real-estate-analyzer-foundry-agent) | Async Tool Execution — `asyncio.gather()` concurrent dispatch; AgentSession + Responses API; live OSM walkability via osmnx; CLI + Web UI | [→](https://github.com/rajshrinivasan/real-estate-analyzer-foundry-agent) |
 
 ---
 
@@ -61,6 +62,9 @@ Knowledge base grounding
 
 Conditional DAG workflow
   13  WorkflowEngine              — declared graph, Python branch conditions, JSON step outputs
+
+Async tool execution
+  14  asyncio.gather()            — concurrent tool dispatch; wall time = slowest tool; Responses API session chaining; live OSM data
 ```
 
 ---
@@ -74,6 +78,8 @@ Conditional DAG workflow
 - **mcp + fastmcp** — stdio transport, runtime tool discovery (Projects 09–10)
 - **fastapi + httpx + tenacity** — A2A HTTP microservices, parallel dispatch, retries (Project 11)
 - **azure-ai-agents** — AgentsClient, FileSearchTool, streaming via `runs.stream()` (Project 12)
+- **azure-ai-projects (async) + openai Responses API** — `AsyncOpenAI` via `get_openai_client()`, `previous_response_id` session chaining (Project 14)
+- **osmnx** — live walkability scores from OpenStreetMap, in-memory cache (Project 14)
 - **Azure DefaultAzureCredential** — `az login` for local dev, managed identity in production
 
 ---
