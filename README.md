@@ -24,6 +24,7 @@ The progression moves from single-agent primitives (tool use, code execution, pe
 | 12 | [Product Support Agent](https://github.com/rajshrinivasan/product-support-foundry-agent) | Knowledge Base Grounding — FileSearchTool + VectorStore; streaming responses; source citations; persistent vector store across sessions | [→](https://github.com/rajshrinivasan/product-support-foundry-agent) |
 | 13 | [Bug Triage Workflow](https://github.com/rajshrinivasan/bug-triage-workflow-foundry-agent) | Conditional DAG Workflow — LLM classifier routes to critical escalation, sprint triage, or backlog branch; Python controls flow, LLM controls content | [→](https://github.com/rajshrinivasan/bug-triage-workflow-foundry-agent) |
 | 14 | [Real Estate Market Analyzer](https://github.com/rajshrinivasan/real-estate-analyzer-foundry-agent) | Async Tool Execution — `asyncio.gather()` concurrent dispatch; AgentSession + Responses API; live OSM walkability via osmnx; CLI + Web UI | [→](https://github.com/rajshrinivasan/real-estate-analyzer-foundry-agent) |
+| 15 | [Personal Learning Coach](https://github.com/rajshrinivasan/learning-coach-foundry-agent) | Stateful Personalization — persistent JSON profile injected into system prompt each session; `update_profile()` tool accumulates goals, topics, and notes; ephemeral thread, durable profile; Gradio web UI | [→](https://github.com/rajshrinivasan/learning-coach-foundry-agent) |
 
 ---
 
@@ -65,6 +66,9 @@ Conditional DAG workflow
 
 Async tool execution
   14  asyncio.gather()            — concurrent tool dispatch; wall time = slowest tool; Responses API session chaining; live OSM data
+
+Stateful personalization
+  15  Persistent profile          — JSON profile injected into system prompt; update_profile() tool; ephemeral thread, durable state
 ```
 
 ---
