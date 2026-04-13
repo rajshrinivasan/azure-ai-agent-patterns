@@ -25,6 +25,7 @@ The progression moves from single-agent primitives (tool use, code execution, pe
 | 13 | [Bug Triage Workflow](https://github.com/rajshrinivasan/bug-triage-workflow-foundry-agent) | Conditional DAG Workflow — LLM classifier routes to critical escalation, sprint triage, or backlog branch; Python controls flow, LLM controls content | [→](https://github.com/rajshrinivasan/bug-triage-workflow-foundry-agent) |
 | 14 | [Real Estate Market Analyzer](https://github.com/rajshrinivasan/real-estate-analyzer-foundry-agent) | Async Tool Execution — `asyncio.gather()` concurrent dispatch; AgentSession + Responses API; live OSM walkability via osmnx; CLI + Web UI | [→](https://github.com/rajshrinivasan/real-estate-analyzer-foundry-agent) |
 | 15 | [Personal Learning Coach](https://github.com/rajshrinivasan/learning-coach-foundry-agent) | Stateful Personalization — persistent JSON profile injected into system prompt each session; `update_profile()` tool accumulates goals, topics, and notes; ephemeral thread, durable profile; Gradio web UI | [→](https://github.com/rajshrinivasan/learning-coach-foundry-agent) |
+| 16 | [Enterprise Knowledge Hub](https://github.com/rajshrinivasan/enterprise-knowledge-hub-foundry-agent) | A2A + Knowledge Base Grounding — orchestrator routes to 3 specialist FastAPI agents (HR / IT / Finance), each backed by a private vector store; confidence-weighted answer merge; per-request trace data; Gradio admin dashboard | [→](https://github.com/rajshrinivasan/enterprise-knowledge-hub-foundry-agent) |
 
 ---
 
@@ -69,6 +70,9 @@ Async tool execution
 
 Stateful personalization
   15  Persistent profile          — JSON profile injected into system prompt; update_profile() tool; ephemeral thread, durable state
+
+A2A + knowledge base grounding
+  16  A2A routing + VectorStore   — confidence-weighted dispatch to 3 dept agents; per-dept VS; trace log; Gradio admin UI
 ```
 
 ---
@@ -81,9 +85,10 @@ Stateful personalization
 - **agent-framework-foundry** — SequentialBuilder, ConcurrentBuilder, HandoffBuilder, GroupChatBuilder (Projects 05–08)
 - **mcp + fastmcp** — stdio transport, runtime tool discovery (Projects 09–10)
 - **fastapi + httpx + tenacity** — A2A HTTP microservices, parallel dispatch, retries (Project 11)
-- **azure-ai-agents** — AgentsClient, FileSearchTool, streaming via `runs.stream()` (Project 12)
+- **azure-ai-agents** — AgentsClient, FileSearchTool, streaming via `runs.stream()` (Projects 12, 16)
 - **azure-ai-projects (async) + openai Responses API** — `AsyncOpenAI` via `get_openai_client()`, `previous_response_id` session chaining (Project 14)
 - **osmnx** — live walkability scores from OpenStreetMap, in-memory cache (Project 14)
+- **gradio** — Gradio web UI for chat and admin dashboards (Projects 15–16)
 - **Azure DefaultAzureCredential** — `az login` for local dev, managed identity in production
 
 ---
